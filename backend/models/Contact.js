@@ -7,4 +7,4 @@ const contactSchema = new mongoose.Schema({
   date: { type: Date, default: Date.now }
 });
 
-export default mongoose.model("Contact", contactSchema);
+export default mongoose.model("portfolioContact", contactSchema);
