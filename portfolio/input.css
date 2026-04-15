@@ -1,0 +1,41 @@
+/* 1. Import all of Tailwind's styles. */
+@import "tailwindcss";
+
+/* 2. Define your theme using standard CSS Custom Properties inside @theme. */
+@theme {
+  /* Font Families */
+  --font-sans: 'Poppins', sans-serif;
+
+  /* Colors */
+  /* This creates utilities like: bg-brand, text-brand, border-brand */
+  --color-brand: #5a67f2;
+  --color-brand-hover: #727cee;
+
+  /* These create color utilities for your gradient */
+  --color-gradient-start: #4167f0;
+  --color-gradient-mid1: #7578d8;
+  --color-gradient-mid2: #876fe3;
+  --color-gradient-end: #ae8ff5;
+
+  /* This creates utilities like: bg-nav-text, text-nav-text */
+  --color-nav-text: #6f7176;
+}
+
+/* 3. Add your custom base styles and utilities. */
+@layer base {
+  html {
+    scroll-padding-top: 65px;
+  }
+}
+
+@layer utilities {
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

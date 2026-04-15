@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishipal Singh | Portfolio Website</title>
+    <link href="./output.css" rel="stylesheet">
+    
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body class="bg-[#f9f9f9] text-gray-800">
+
+
+    
+
+    <div id="container">
+        <!-- hello -->
+        
+        <!-- Navigation Bar -->
+        <nav class="fixed top-0 left-0 w-full bg-[#ececf9] shadow-sm z-50 flex items-center justify-between md:justify-around h-[65px] px-6">
+            <a href="#hero-section" id="logo" class="text-3xl font-semibold text-brand">RS</a>
+            
+            <!-- Desktop Navigation Links -->
+            <ul class="hidden md:flex items-center gap-[60px]">
+                <li><a href="#hero-section" class="text-[14px] font-medium text-nav-text hover:text-brand transition-colors">Home</a></li>
+                <li><a href="#about-section" class="text-[14px] font-medium text-nav-text hover:text-brand transition-colors">About</a></li>
+                <li><a href="#project-section" class="text-[14px] font-medium text-nav-text hover:text-brand transition-colors">Projects</a></li>
+                <li><a href="#skills-section" class="text-[14px] font-medium text-nav-text hover:text-brand transition-colors">Skills</a></li>
+                <li><a href="#contact-section" class="text-[14px] font-medium text-nav-text hover:text-brand transition-colors">Contact</a></li>
+            </ul>
+            
+            <a href="#contact-section" class="hidden md:block bg-brand text-white font-semibold py-[9px] px-3 rounded-md hover:bg-brand-hover transition-colors">Hire Me</a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-3xl text-brand z-50">
+                <i id="menu-open-icon" class="ri-menu-3-line"></i>
+                <i id="menu-close-icon" class="ri-close-line hidden"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-screen bg-[#ececf9] z-40 flex flex-col items-center justify-center">
+            <ul class="flex flex-col items-center gap-8">
+                <li><a href="#hero-section" class="mobile-link text-2xl font-medium text-nav-text hover:text-brand transition-colors">Home</a></li>
+                <li><a href="#about-section" class="mobile-link text-2xl font-medium text-nav-text hover:text-brand transition-colors">About</a></li>
+                <li><a href="#project-section" class="mobile-link text-2xl font-medium text-nav-text hover:text-brand transition-colors">Projects</a></li>
+                <li><a href="#skills-section" class="mobile-link text-2xl font-medium text-nav-text hover:text-brand transition-colors">Skills</a></li>
+                <li><a href="#contact-section" class="mobile-link text-2xl font-medium text-nav-text hover:text-brand transition-colors">Contact</a></li>
+            </ul>
+            <a href="#contact-section" class="mobile-link mt-10 bg-brand text-white font-semibold py-3 px-6 rounded-md hover:bg-brand-hover transition-colors">Hire Me</a>
+        </div>
+
+        <!-- Hero Section -->
+        <section id="hero-section" class="relative min-h-screen w-full overflow-hidden bg-[linear-gradient(to_bottom_right,#4167f0,#7578d8,#876fe3,#ae8ff5)] flex items-center justify-center text-white px-4 sm:px-6">
+    
+    <style>
+        /* Entrance animation from your first snippet */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+    </style>
+    <div class="relative z-10 max-w-7xl mx-auto w-full pt-32 pb-12 lg:pl-20">
+        <div class="grid lg:grid-cols-2 gap-5 items-center">
+            
+            <div class="text-center lg:text-left fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+                    Rishipal <span class="text-white/80">Singh</span>
+                </h1>
+                
+                <h2 class="text-xl md:text-2xl font-light mb-6 flex items-center justify-center lg:justify-start gap-2 text-white/90">
+                    <i class="ri-code-s-slash-line"></i>
+                    Full-Stack Developerer
+                </h2>
+                
+                <p class="text-lg text-white/80 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Passionate about creating beautiful, functional web experiences. I am actively building projects that solve real problems and mastering the latest technologies to deliver quality.
+                </p>
+                
+                <div class="flex flex-wrap gap-2 justify-center lg:justify-start mb-8">
+                    <span class="px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm">React</span>
+                    <span class="px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm">JavaScript</span>
+                    <span class="px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm">Node.js</span>
+                    <span class="px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm">Express.js</span>
+                    <span class="px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm">MongoDB</span>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                    <a href="#project-section" class="group flex items-center justify-center bg-white text-black font-medium py-3 px-8 rounded-xl hover:bg-gray-100 transition-all duration-300">
+                        View My Work
+                        <i class="ri-arrow-down-line ml-2 group-hover:translate-y-1 transition-transform"></i>
+                    </a>
+                    <a href="#contact-section" class="flex items-center justify-center border border-white/30 bg-white/10 backdrop-blur-sm py-3 px-8 rounded-xl hover:bg-white/20 transition-all">
+                        Get In Touch
+                    </a>
+                </div>
+                
+                <div class="flex justify-center lg:justify-start gap-4">
+                    <a href="https://github.com/Rishipal843" class="text-white/70 hover:text-white p-3 px-4 rounded-xl bg-white/5 transition-all"><i class="ri-github-line text-2xl"></i></a>
+                    <a href="https://www.linkedin.com/in/rishipal-singh19/" class="text-white/70 hover:text-white p-3 px-4 rounded-xl bg-white/5 transition-all"><i class="ri-linkedin-line text-2xl"></i></a>
+                    <a href="#contact-section" class="text-white/70 hover:text-white p-3 px-4 rounded-xl bg-white/5 transition-all"><i class="ri-mail-line text-2xl"></i></a>
+                </div>
+            </div>
+            
+             <div class="hidden lg:flex justify-end items-center pr-18 pb-20 fade-in-up ">
+                <div class="relative">
+                    <div class="relative z-100 bg-white/10 backdrop-blur-md border border-white/20 rounded-[2.5rem] p-8 shadow-2xl">
+                        <div class="w-66 h-62 rounded-3xl overflow-hidden mb-8 border border-white/20">
+                            <img src="./image/rishi.png" alt="Alex Chen" class="w-full h-full object-cover opacity-80" />
+                        </div>
+                        
+                        <div class="bg-slate-900/90 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
+                            <div class="flex items-center gap-2 mb-3">
+                                <div class="w-2.5 h-2.5 rounded-full bg-red-500/70"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/70"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-500/70"></div>
+                                <span class="text-[10px] text-gray-400 font-mono ml-2">portfolio.tsx</span>
+                            </div>
+                            <code class="text-sm font-mono text-blue-300">
+                                <span class="text-purple-400">const</span> dev = <span class="text-green-400">"Rishi"</span>;
+                            </code>
+                        </div>
+                    </div>
+                                      <div class="absolute -top-4 -right-4 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl px-4 py-3 shadow-lg">
+                        <div class="text-2xl font-bold">10+</div>
+                        <div class="text-[10px] uppercase tracking-wider opacity-80">Projects</div>
+                    </div>
+                    
+                    <div class="absolute -bottom-4 -left-4 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl px-4 py-3 shadow-lg">
+                        <i class="ri-terminal-box-line text-yellow-300 mb-1"></i>
+                        <div class="text-[10px] uppercase tracking-wider opacity-80">Always coding</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <main class="w-full">
+            <section id="about-section" class="min-h-screen w-full py-20 text-center bg-[#f6f7f8] fade-in-up px-6 sm:px-8 lg:px-[120px]">
+                <h1 class="text-3xl sm:text-[40px] font-semibold mb-7">About Me</h1>
+                <p class="text-lg text-gray-600 leading-8 max-w-2xl mx-auto">A passionate Web Developer with a love for creating innovative and seamless digital experiences.</p>
+                
+                <div id="about-content" class="mt-10 grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                    <div id="about-left" class="lg:col-span-3 text-left space-y-8 text-lg text-gray-500">
+                        <p>I'm Rishipal Singh, a Full Stack Developer and UX Designer passionate about creating user-focused digital experiences. I specialize in building responsive, clean, and interactive websites using modern frontend technologies and delivering high-quality code and design.</p>
+                        <p>I actively work on personal and freelance projects to sharpen both my development and design skills, consistently applying best practices in Computer Science principles. I use my foundational knowledge to drive innovation in every solution I build.</p>
+                        <p>My goal is to grow as a full-stack developer and contribute to meaningful, user-friendly solutions that impact users globally. I thrive on collaborating with others and continuously learning in the fast-paced world of technology.</p>
+                    </div>
+                    <div id="about-right" class="lg:col-span-2 flex justify-center items-center">
+                        <div id="imgcard" class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200/80 hover:-translate-y-2 transition-transform duration-300 text-center w-full max-w-[350px] hover:shadow-[0_5px_15px_rgba(90,103,242,0.35)]">
+                            <img src="./image/rishi.png" alt="Rishipal Singh" class="w-48 h-48 sm:w-55 sm:h-55 mx-auto rounded-full object-cover border-4 border-purple-200">
+                            <h3 class="text-xl font-semibold mt-6">Rishipal Singh</h3>
+                            <h4 class="text-brand font-medium mt-2 mb-2">Web Developer</h4>
+                            <p class="text-gray-500 italic text-sm">"Crafting seamless digital experiences with clean code."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="project-section" class="w-full py-20 bg-[#f1f2f5] text-center fade-in-up px-6 sm:px-8 lg:px-[120px]">
+    <h1 class="text-3xl sm:text-[40px] font-semibold mb-7">Featured Projects</h1>
+    <p class="text-lg text-gray-600 leading-8 max-w-2xl mx-auto">A collection of projects that showcase my skills and passion for web development</p>
+    
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 text-left">
+        
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+            <img src="./image/atsresume.png" alt="BroBlogger Project" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">AI-powered Resume Analyzer</h3>
+                <p class="text-gray-600 mb-4">This JavaScript-based MERN project uses AI to parse PDF resumes, comparing skills against job descriptions. It provides real-time ATS scoring, keyword optimization, and feedback through a responsive Tailwind CSS interface.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/Rishipal843/AI-resume-analyzer" class="inline-flex items-center gap-2 py-3 px-5 bg-white border border-gray-300 text-gray-800 font-semibold rounded-lg shadow-sm hover:bg-[#9d71f4] hover:text-white transition-colors duration-300">
+                        <i class="ri-github-line text-xl font-medium"></i>
+                        <span>Code</span>
+                    </a>
+                    <a href="https://ai-resume-analyzer-nine-jade.vercel.app/" class="inline-flex items-center gap-2 py-3 px-5 bg-brand text-white font-semibold rounded-lg shadow-sm hover:bg-brand-hover transition-colors duration-300">
+                        <i class="ri-external-link-line text-xl font-medium"></i>
+                        <span>Live Demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+            <img src="./image/blog.png" alt="BroBlogger Project" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">BroBlogger Blogging site</h3>
+                <p class="text-gray-600 mb-4">BroBlogger explores the real stories behind modern innovations. We deliver in-depth analysis and verified facts on the software, hardware, and tech breakthroughs that shape our future.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/Rishipal843/BroBloggerRepo" class="inline-flex items-center gap-2 py-3 px-5 bg-white border border-gray-300 text-gray-800 font-semibold rounded-lg shadow-sm hover:bg-[#9d71f4] hover:text-white transition-colors duration-300">
+                        <i class="ri-github-line text-xl font-medium"></i>
+                        <span>Code</span>
+                    </a>
+                    <a href="https://brobloggerrepo-2.onrender.com/" class="inline-flex items-center gap-2 py-3 px-5 bg-brand text-white font-semibold rounded-lg shadow-sm hover:bg-brand-hover transition-colors duration-300">
+                        <i class="ri-external-link-line text-xl font-medium"></i>
+                        <span>Live Demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+            <img src="./image/headphone landingpage.png" alt="BroBlogger Project" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Headphone Landing Page</h3>
+                <p class="text-gray-600 mb-4">This high-performance headphone landing page features a sleek, mobile-first design built with HTML5 and CSS3. It utilizes JavaScript for scroll-triggered animations and interactive product toggles, ensuring a seamless, immersive user experience.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/Rishipal843/headphone_landingpage" class="inline-flex items-center gap-2 py-3 px-5 bg-white border border-gray-300 text-gray-800 font-semibold rounded-lg shadow-sm hover:bg-[#9d71f4] hover:text-white transition-colors duration-300">
+                        <i class="ri-github-line text-xl font-medium"></i>
+                        <span>Code</span>
+                    </a>
+                    <a href="https://headphone-landingpage-red.vercel.app/" class="inline-flex items-center gap-2 py-3 px-5 bg-brand text-white font-semibold rounded-lg shadow-sm hover:bg-brand-hover transition-colors duration-300">
+                        <i class="ri-external-link-line text-xl font-medium"></i>
+                        <span>Live Demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+            <img src="./image/weather.png" alt="Weather App Project" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Weather app</h3>
+                <p class="text-gray-600 mb-4">This Weather App provides a clean and intuitive interface for checking real-time weather conditions. Search for any city and get instant access to temperature, humidity, and wind speed, helping you plan your day with confidence.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/Rishipal843/_weather_app" class="inline-flex items-center gap-2 py-3 px-5 bg-white border border-gray-300 text-gray-800 font-semibold rounded-lg shadow-sm hover:bg-[#9d71f4] hover:text-white transition-colors duration-300">
+                        <i class="ri-github-line text-xl font-medium"></i>
+                        <span>Code</span>
+                    </a>
+                    <a href="https://weatherapp-dun-one.vercel.app/" class="inline-flex items-center gap-2 py-3 px-5 bg-brand text-white font-semibold rounded-lg shadow-sm hover:bg-brand-hover transition-colors duration-300">
+                        <i class="ri-external-link-line text-xl font-medium"></i>
+                        <span>Live Demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden group hidden" data-extra-project>
+            <img src="./image/todo.png" alt="Todo App Project" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Todo app</h3>
+                <p class="text-gray-600 mb-4">A clean and simple to-do list to help you manage your daily tasks. Add, complete, and delete items with ease.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/Rishipal843/todo_app" class="inline-flex items-center gap-2 py-3 px-5 bg-white border border-gray-300 text-gray-800 font-semibold rounded-lg shadow-sm hover:bg-[#9d71f4] hover:text-white transition-colors duration-300">
+                        <i class="ri-github-line text-xl font-medium"></i>
+                        <span>Code</span>
+                    </a>
+                    <a href="https://todoapp-drab-nu.vercel.app/" class="inline-flex items-center gap-2 py-3 px-5 bg-brand text-white font-semibold rounded-lg shadow-sm hover:bg-brand-hover transition-colors duration-300">
+                        <i class="ri-external-link-line text-xl font-medium"></i>
+                        <span>Live Demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div> <div class="text-center mt-12">
+        <button id="view-all-projects-btn" class="border border-brand text-brand font-semibold py-3 px-8 rounded-lg hover:bg-brand hover:text-white transition-all duration-300">
+            View All Projects
+        </button>
+    </div>
+</section>
+
+
+            
+            <section id="skills-section" class="w-full py-20 text-center bg-[#f6f7f8] fade-in-up px-6 sm:px-8 lg:px-[120px]">
+                <h1 class="text-3xl sm:text-[40px] font-semibold mb-7">Skills & Expertise</h1>
+                <p class="text-lg text-gray-600 leading-8 max-w-2xl mx-auto">The technologies and tools I use to build web applications.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-left">
+                        <h3 class="text-2xl font-bold text-center mb-6">Frontend</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1"><span class="font-medium">HTML5</span><span>95%</span></div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-brand h-2.5 rounded-full w-0 transition-all duration-1000" data-width="w-[95%]"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1"><span class="font-medium">CSS3 & Tailwind</span><span>90%</span></div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-brand h-2.5 rounded-full w-0 transition-all duration-1000" data-width="w-[90%]"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1"><span class="font-medium">JavaScript</span><span>80%</span></div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-brand h-2.5 rounded-full w-0 transition-all duration-1000" data-width="w-[80%]"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1"><span class="font-medium">React</span><span>75%</span></div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-brand h-2.5 rounded-full w-0 transition-all duration-1000" data-width="w-[75%]"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-left">
+                        <h3 class="text-2xl font-bold text-center mb-6">Backend</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1"><span class="font-medium">Node.js</span><span>70%</span></div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-brand h-2.5 rounded-full w-0 transition-all duration-1000" data-width="w-[70%]"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1"><span class="font-medium">Express.js</span><span>65%</span></div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-brand h-2.5 rounded-full w-0 transition-all duration-1000" data-width="w-[65%]"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1"><span class="font-medium">MongoDB</span><span>60%</span></div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-brand h-2.5 rounded-full w-0 transition-all duration-1000" data-width="w-[60%]"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-left">
+                        <h3 class="text-2xl font-bold text-center mb-6">Tools & Design</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1"><span class="font-medium">Git & GitHub</span><span>85%</span></div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-brand h-2.5 rounded-full w-0 transition-all duration-1000" data-width="w-[85%]"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1"><span class="font-medium">Figma</span><span>70%</span></div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-brand h-2.5 rounded-full w-0 transition-all duration-1000" data-width="w-[70%]"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1"><span class="font-medium">VS Code</span><span>90%</span></div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-brand h-2.5 rounded-full w-0 transition-all duration-1000" data-width="w-[90%]"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1"><span class="font-medium">Postman</span><span>60%</span></div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-brand h-2.5 rounded-full w-0 transition-all duration-1000" data-width="w-[60%]"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="contact-section" class="w-full py-20 bg-[#f1f2f5] fade-in-up px-6 sm:px-8 lg:px-[120px]">
+                <div class="text-center mb-16">
+                    <h1 class="text-3xl sm:text-[40px] font-semibold mb-7">Get In Touch</h1>
+                    <p class="text-lg text-gray-600 leading-8 max-w-2xl mx-auto">Have a question or a project in mind? Feel free to reach out.</p>
+                </div>
+
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-semibold mb-6">Send a Message</h2>
+                        <form id="contactForm" class="space-y-2">
+    <div>
+        <label for="name" class="font-medium text-sm">Full Name</label>
+        <input type="text" placeholder="Your Name" id="name" required name="name" class="w-full p-3 mt-2 border border-gray-300 rounded-md focus:ring-2 bg-[#f6f7f8] focus:ring-brand focus:outline-none">
+    </div>
+    <div>
+        <label for="email" class="font-medium text-sm">Email</label>
+        <input type="email" placeholder="Your Email" id="email" required name="email" class="w-full mt-2 p-3 border border-gray-300 bg-[#f6f7f8] rounded-md focus:ring-2 focus:ring-brand focus:outline-none">
+    </div>
+    <div>
+        <label for="message" class="font-medium text-sm">Message</label>
+        <textarea id="message" placeholder="Your Message" required name="message" rows="5" class="w-full mt-2 p-3 border border-gray-300 bg-[#f6f7f8] rounded-md focus:ring-2 focus:ring-brand focus:outline-none"></textarea>
+    </div>
+    <button type="submit" class="w-full bg-brand text-white font-medium py-3 px-6 rounded-lg hover:bg-brand-hover transition-colors text-sm !mt-6">Send Message</button>
+    
+    <p id="status" class="text-center mt-3"></p> 
+
+</form>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                            <div class="space-y-3 text-gray-600">
+                                <p class="flex items-center gap-3"><i class="ri-mail-line text-brand text-xl"></i> rishi191816@gmail.com</p>
+                                <p class="flex items-center gap-3"><i class="ri-map-pin-line text-brand text-xl"></i> Jalandhar, Punjab, India</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-semibold mb-6">Follow Me</h3>
+                            <div class="flex justify-evenly items-center">
+                                <!-- Responsive Social Links -->
+                                <a href="https://github.com/Rishipal843" class="flex flex-col items-center text-gray-600 rounded-lg p-4 hover:bg-[#f1f2f5] hover:text-blue-700 transition-all duration-300 ease-in-out">
+                                    <i class="ri-github-fill text-4xl"></i>
+                                    <span class="mt-1 text-sm">GitHub</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/rishipal-singh19/" class="flex flex-col items-center text-gray-600 rounded-lg p-4 hover:bg-[#f1f2f5] hover:text-blue-700 transition-all duration-300 ease-in-out">
+                                    <i class="ri-linkedin-box-fill text-4xl"></i>
+                                    <span class="mt-1 text-sm">LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-gray-800 text-gray-400 text-center p-6">
+            <p>&copy; 2025 Rishipal Singh. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
