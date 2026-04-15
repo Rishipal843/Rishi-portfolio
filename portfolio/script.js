@@ -79,26 +79,43 @@
 
         // api call for contact form
 
-        document.getElementById("contactForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
+    document.getElementById("contactForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
+    const submitBtn = e.target.querySelector('button');
+    const statusEl = document.getElementById("status");
+    
+    // UI Feedback: Loading
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Sending...";
+    statusEl.innerText = "";
 
-      try {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    try {
         const res = await fetch("https://rishi-portfolio-backendv2.onrender.com/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, message })
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, message })
         });
 
         const data = await res.json();
-        document.getElementById("status").innerText = data.message;
-        document.getElementById("status").style.color = "green";
-        document.getElementById("contactForm").reset();
-      } catch (err) {
-        document.getElementById("status").innerText = "Error sending message!";
-        document.getElementById("status").style.color = "red";
-      }
-    }); 
+        
+        if (res.ok) {
+            statusEl.innerText = data.message;
+            statusEl.style.color = "#10b981"; // Emerald green
+            e.target.reset();
+        } else {
+            throw new Error(data.message || "Submission failed");
+        }
+    } catch (err) {
+        statusEl.innerText = "Oops! Something went wrong.";
+        statusEl.style.color = "#ef4444"; // Modern red
+    } finally {
+        // Reset button state
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send Message";
+    }
+});
